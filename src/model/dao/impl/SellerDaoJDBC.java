@@ -112,7 +112,6 @@ public class SellerDaoJDBC implements SellerDao {
             st.setInt(1, id);
             rs = st.executeQuery();
 
-            /* CRIANDO O OBJETO SELLER E DEPARTMENT A PARTIR DA BUSCA RETORNADA */
             if (rs.next()) {
                 Department dep = instantiateDepartment(rs);
                 Seller obj = instantiateSeller(rs, dep);
